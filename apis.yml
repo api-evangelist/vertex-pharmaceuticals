@@ -1,7 +1,12 @@
 aid: vertex-pharmaceuticals
-url: https://raw.githubusercontent.com/api-evangelist/vertex-pharmaceuticals/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/vertex-pharmaceuticals/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.vertex-pharmaceuticals.com
+description: >-
+  Vertex Pharmaceuticals is a global biotechnology company that invests in scientific
+  innovation to create transformative medicines for people with serious diseases,
+  with a focus on cystic fibrosis and other serious diseases.
