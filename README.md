@@ -1,33 +1,53 @@
-# Vertex Pharmaceuticals (vertex-pharmaceuticals)
-Vertex Pharmaceuticals is a Fortune 500 company. This repository captures the APIs, developer tools, and machine-readable API artifacts for Vertex Pharmaceuticals.
+# Vertex Pharmaceuticals
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/vertex-pharmaceuticals/refs/heads/main/apis.yml)
+Vertex Pharmaceuticals is a global biotechnology company headquartered in Boston, Massachusetts, focused on scientific innovation to create transformative medicines for people with serious diseases. The company specializes in cystic fibrosis, sickle cell disease, beta thalassemia, APOL1-mediated kidney disease, pain, and other serious conditions.
 
-## Scope
+**URL:** [https://raw.githubusercontent.com/api-evangelist/vertex-pharmaceuticals/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/vertex-pharmaceuticals/refs/heads/main/apis.yml)
 
-- **Type:** Contract
-- **Position:** Consuming
-- **Access:** 3rd-Party
+## Tags
 
-## Tags:
-
- - Fortune 500
+- Biotechnology
+- Clinical Trials
+- Drug Discovery
+- Healthcare
+- Life Sciences
+- Pharmaceuticals
 
 ## Timestamps
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-03-21
+- **Created:** 2026-05-03
+- **Modified:** 2026-05-03
 
 ## APIs
 
-No public APIs have been documented yet. Contributions welcome.
+### Clinical Trials Data Sharing
+
+Vertex Pharmaceuticals provides qualified researchers with access to clinical trial data through a formal data request and scientific review process. Researchers can submit proposals to access anonymized patient-level data, study protocols, and statistical analysis plans from completed Vertex clinical trials.
+
+- **Documentation:** [https://www.vrtx.com/our-science/clinical-trials-data-sharing/](https://www.vrtx.com/our-science/clinical-trials-data-sharing/)
+- **Portal:** [https://clinicaltrials.vrtx.com/](https://clinicaltrials.vrtx.com/)
 
 ## Common Properties
 
-- [Website](https://www.vertex-pharmaceuticals.com)
+- [Website](https://www.vrtx.com/)
+- [R&D Pipeline](https://www.vrtx.com/our-science/pipeline/)
+- [Clinical Trials Portal](https://clinicaltrials.vrtx.com/)
+- [Data Sharing Program](https://www.vrtx.com/our-science/clinical-trials-data-sharing/)
+- [Investor Relations](https://investors.vrtx.com/)
+- [Patient Resources](https://www.vrtx.com/patients/)
+- [Early Access Program](https://www.vrtx.com/medicines/early-access/)
+- [Newsroom](https://www.vrtx.com/media/)
+
+## About
+
+Vertex focuses on developing medicines for:
+
+- **Cystic Fibrosis** — Multiple approved medicines including TRIKAFTA/KAFTRIO
+- **Sickle Cell Disease & Beta Thalassemia** — CASGEVY (exa-cel), a gene-editing therapy
+- **APOL1-Mediated Kidney Disease** — Pipeline programs targeting serious kidney conditions
+- **Acute & Neuropathic Pain** — NaV1.8 inhibitor programs
+- **Other Serious Conditions** — Myotonic dystrophy type 1, alpha-1 antitrypsin deficiency
 
 ## Maintainers
 
-**FN:** API Evangelist
-
-**Email:** info@apievangelist.com
+**Kin Lane** — kin@apievangelist.com
