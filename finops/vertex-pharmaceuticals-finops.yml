@@ -8,127 +8,52 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Vertex Pharmaceuticals
 providerId: vertex-pharmaceuticals
-publisherName: Vertex Pharmaceuticals
-serviceCategory: API
+publisherName: Vertex Pharmaceuticals Incorporated
+serviceCategory: Pharmaceuticals
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
-  - Biotechnology
-  - Clinical Trials
-  - Drug Discovery
-  - Healthcare
-  - Life Sciences
-  - Pharmaceuticals
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Vertex Pharmaceuticals API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+  - Pharmaceuticals
+  - Life Sciences
+description: Vertex Pharmaceuticals is a biotechnology company without a public developer API or
+  metered billing surface. This artifact retains the FinOps shape only to mark the catalog entry as
+  a Contact Sales / partnership engagement.
+sources:
+  - https://www.vrtx.com/
+notes: No public unit pricing, FOCUS columns, or meters are reconcilable. Treat as partnership-
+  governed.
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Contract / Custom
+  billingFrequency: Per-Invoice
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
-    - Tax
-    - Credit
-    - Adjustment
-  chargeFrequency: Recurring
 focusColumns:
   ServiceName: Vertex Pharmaceuticals
-  ServiceCategory: Developer Tools / API
+  ServiceCategory: Pharmaceuticals
   ProviderName: Vertex Pharmaceuticals
-  PublisherName: Vertex Pharmaceuticals
-  InvoiceIssuerName: Vertex Pharmaceuticals
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: Vertex Pharmaceuticals Incorporated
   BillingCurrency: USD
-  ChargeCategory: Usage
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: contract_engagement
+    unit: varies
     aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
-    dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: Vertex Clinical Trials Data Sharing
-    baseURL: ''
-    tags:
-      - Clinical Data
-      - Clinical Trials
-      - Data Sharing
-      - Research
-    serviceName: Vertex Clinical Trials Data Sharing
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+principles:
+  - name: Visibility
+    description: No usage telemetry is published; visibility is provided through partnership reporting
+      cadences agreed in the data-sharing contract.
+  - name: Allocation
+    description: Costs are allocated through the partnership P&L; there is no per-tenant or per-API
+      breakdown to attribute.
+  - name: Optimization
+    description: Optimization is contractual - scope, term length, and milestone-based commercial
+      structures negotiated in the partnership agreement.
+  - name: Accountability
+    description: The Vertex business-development counterparty owns commercial terms; the consuming
+      organization's partnership lead owns spend on its side.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
