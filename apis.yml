@@ -43,6 +43,8 @@ apis:
       - type: Portal
         url: https://clinicaltrials.vrtx.com/
 common:
+  - type: DomainSecurity
+    url: security/vertex-pharmaceuticals-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/vertex-pharmaceuticals
   - url: https://www.vrtx.com/
