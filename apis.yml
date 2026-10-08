@@ -66,6 +66,12 @@ apis:
       - type: Portal
         url: https://clinicaltrials.vrtx.com/
 common:
+  - type: Plans
+    url: plans/vertex-pharmaceuticals-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/vertex-pharmaceuticals-rate-limits.yml
+  - type: FinOps
+    url: finops/vertex-pharmaceuticals-finops.yml
   - type: DomainSecurity
     url: security/vertex-pharmaceuticals-domain-security.yml
   - type: LinkedIn
