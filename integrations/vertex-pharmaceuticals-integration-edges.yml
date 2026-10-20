@@ -1,0 +1,79 @@
+edges:
+- partner_name: FDA CBER (approved cellular and gene therapy products)
+  partner: null
+  partner_match: register-name
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.fda.gov/vaccines-blood-biologics/casgevy
+  category: Approved cell / gene therapy product
+  contract_reference:
+    register: FDA Approved Cellular and Gene Therapy Products (fda.gov, CBER)
+    standard: FDA biologics license (cellular and gene therapy products)
+    role: approved-cgt-manufacturer
+    spec_file: null
+    registered_name: Vertex Pharmaceuticals Incorporated
+    matched_domain: null
+    matched_by: register-name
+    certified_products:
+    - product: gene-modified autologous HSC (FDA approval)
+      product_type: gene-modified autologous HSC
+      lapsed: false
+      products_sample:
+      - CASGEVY (exagamglogene autotemcel [exa-cel])
+    signal_note: certified_products = one entry per approved PRODUCT TYPE, never per product; lapsed when every
+      product of the type is withdrawn / not authorised. Products are context, never counted
+    detected_by: sweep-cell-gene-therapy.py
+    detected: '2026-10-20'
+    register_name_note: register-name 'vertexpharmaceuticals' = vertex-pharmaceuticals; no wikidata P856
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-cell-gene-therapy.py
+  first_seen: '2026-10-20'
+- partner_name: EMA (advanced therapy medicinal products)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.ema.europa.eu/en/medicines/human/EPAR/casgevy
+  category: Approved cell / gene therapy product
+  contract_reference:
+    register: EMA medicines report (Advanced therapy = Yes; CAT / CHMP opinion, EC decision)
+    standard: EU advanced therapy medicinal product (Regulation (EC) 1394/2007)
+    role: atmp-marketing-authorisation-holder
+    statuses:
+    - Authorised
+    spec_file: null
+    registered_name: Vertex Pharmaceuticals (Ireland) Limited
+    matched_domain: vrtx.com
+    matched_by: domain
+    certified_products:
+    - product: gene-modified autologous HSC (EU marketing authorisation, ATMP)
+      product_type: gene-modified autologous HSC
+      lapsed: false
+      products_sample:
+      - Casgevy (exagamglogene autotemcel)
+    signal_note: certified_products = one entry per approved PRODUCT TYPE, never per product; lapsed when every
+      product of the type is withdrawn / not authorised. Products are context, never counted
+    detected_by: sweep-cell-gene-therapy.py
+    detected: '2026-10-20'
+    identity: wikidata Q2744099 'Vertex Pharmaceuticals' P856 https://www.vrtx.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-cell-gene-therapy.py
+  first_seen: '2026-10-20'
+generated: '2026-10-20'
+method: searched
+source:
+- https://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products
+- https://www.ema.europa.eu/en/documents/report/medicines-output-medicines-report_en.xlsx
+- https://clinicaltrials.gov/api/v2/studies
+- https://members.alliancerm.org/Online/Directory/Member-Directory.aspx?WebsiteKey=0a8f86de-1bef-4044-be59-e2f7f1c52e39
+checked:
+- https://clinicaltrials.gov/api/v2/studies
+- https://members.alliancerm.org/Online/Directory/Member-Directory.aspx?WebsiteKey=0a8f86de-1bef-4044-be59-e2f7f1c52e39
+- https://www.ema.europa.eu/en/documents/report/medicines-output-medicines-report_en.xlsx
+- https://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products
