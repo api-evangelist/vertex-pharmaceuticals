@@ -65,6 +65,102 @@ edges:
     identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   detected_by: sweep-cell-gene-therapy.py
   first_seen: '2026-10-20'
+- partner_name: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  partner: null
+  partner_match: register-name
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://clinicaltrials.gov/study/NCT05951205
+  category: Interventional trial sponsor / collaborator
+  contract_reference:
+    register: ClinicalTrials.gov API v2 (interventional, started >= 2021-01-01, industry lead sponsor or collaborator)
+    standard: null
+    spec_file: null
+    role: trial-collaborator+lead-sponsor
+    registered_name: Vertex Pharmaceuticals Incorporated
+    matched_domain: null
+    matched_by: register-name
+    lead_sponsor: true
+    active_trial: true
+    latest_start: '2027-07-31'
+    trials_sample:
+    - NCT05951205
+    - NCT07836010
+    - NCT07868926
+    - NCT07654296
+    - NCT07795827
+    signal_note: 'PARTICIPATION only (a trial is not an approval): lead_sponsor, active_trial and latest_start are
+      per-edge signals; the number of trials is never counted'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    register_name_note: register-name 'vertexpharmaceuticals' = vertex-pharmaceuticals; no wikidata P856
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-clinical-trial-sponsors.py
+  first_seen: '2026-10-21'
+- partner_name: EU CTIS (clinical trial sponsors)
+  partner: null
+  partner_match: register-name
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://euclinicaltrials.eu/ctis-public/view/2025-523400-72-00
+  category: EU clinical trial sponsor
+  contract_reference:
+    register: EU Clinical Trials Information System public search (euclinicaltrials.eu, sponsorType 'Pharmaceutical
+      company')
+    standard: null
+    spec_file: null
+    role: eu-trial-sponsor
+    registered_name: Vertex Pharmaceuticals Inc.
+    matched_domain: null
+    matched_by: register-name
+    trials_sample:
+    - 2025-523400-72-00
+    - 2025-523950-15-01
+    - 2025-521661-27-00
+    - 2024-517393-13-00
+    - 2024-517983-47-00
+    signal_note: 'PARTICIPATION only: a CTIS sponsor listing; the number of trials is never counted'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    register_name_note: register-name 'vertexpharmaceuticals' = vertex-pharmaceuticals; no wikidata P856
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-clinical-trial-sponsors.py
+  first_seen: '2026-10-21'
+- partner_name: CDISC (members)
+  partner: cdisc
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  partner_tier: 10+ Years
+  evidence: https://www.cdisc.org/company/vertex-pharmaceuticals
+  category: Clinical data standards member
+  contract_reference:
+    register: CDISC member search (cdisc.org/members/search + public company page website)
+    standard: CDISC clinical data standards (SDTM / ADaM / CDASH / ODM)
+    spec_file: null
+    role: cdisc-member
+    registered_name: Vertex Pharmaceuticals
+    register_id: vertex-pharmaceuticals
+    member_industry: BioTech
+    listed_website: http://www.vrtx.com/
+    matched_domain: vrtx.com
+    matched_by: domain
+    signal_note: 'self-filed paid membership: listing alone = standard-participant (standards adopter); partner_tier
+      is the membership level, never weighted as a tier; hand-reviewed'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+  detected_by: sweep-clinical-trial-sponsors.py
+  first_seen: '2026-10-21'
 generated: '2026-10-20'
 method: searched
 source:
@@ -77,3 +173,6 @@ checked:
 - https://members.alliancerm.org/Online/Directory/Member-Directory.aspx?WebsiteKey=0a8f86de-1bef-4044-be59-e2f7f1c52e39
 - https://www.ema.europa.eu/en/documents/report/medicines-output-medicines-report_en.xlsx
 - https://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products
+- https://api.fda.gov/drug/drugsfda.json
+- https://euclinicaltrials.eu/ctis-public/search
+- https://www.cdisc.org/members/search
